@@ -6,10 +6,12 @@ const adminRouter = require('./Router/AdminUser.js') ;
 const productRouter = require('./Router/Product.js') ;
 const userRouter = require('./Router/User.js') ;
 const orderRouter = require('./Router/Order.js') ;
+const listingsRouter = require('./Router/Listings.js') ;
 dotenv.config()
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(listingsRouter)
 app.use(adminRouter);
 app.use(productRouter);
 app.use(userRouter);
